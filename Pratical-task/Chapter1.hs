@@ -13,3 +13,16 @@ main :: IO ()
 main = do 
  print $ increment 15
   --answer = 16
+
+  doublethenincrement :: Int -> Int 
+doublethenincrement x =
+  --let double = x * 2 
+      --increment = doubled + 1 
+   --in result 
+
+main :: IO ()
+main = do 
+ print $ doublethenincrement 20
+ -- answer = 41
+
+ 
