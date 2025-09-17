@@ -6,7 +6,7 @@ main = do
  print $ double 10 
  --answer = 20
 
- increment :: Int -> Int 
+increment :: Int -> Int 
 increment x = x + 1
 
 main :: IO ()
@@ -14,7 +14,7 @@ main = do
  print $ increment 15
   --answer = 16
 
-  doublethenincrement :: Int -> Int 
+doublethenincrement :: Int -> Int 
 doublethenincrement x =
   --let double = x * 2 
       --increment = doubled + 1 
@@ -45,5 +45,14 @@ main  :: IO ()
 main = do 
  print $ greaterthan18 8 10 
   -- output using Int = False 
-  
+         or 
+greaterthan18 :: Int -> Bool 
+greaterthan18 x = x >= 18
 
+main :: IO ()
+main = do 
+ print $ greaterthan18 17
+ print $ greaterthan18 22
+   --Output =
+ --False
+ --True
