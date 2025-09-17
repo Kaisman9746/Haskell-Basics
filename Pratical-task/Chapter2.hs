@@ -67,3 +67,30 @@ main = do
 --Write function signatures for the following functions:
 
 A function add that takes two Int values and returns their sum.
+
+add :: Int -> Int -> Int 
+add x y = x + y 
+
+main :: IO ()
+main = do 
+ print $ add 500 1700 
+  --Output = 2200
+ A function isEven that takes an Int and returns a Bool indicating if it's even.
+
+isEven :: Int -> Bool
+isEven x = mod x 2 == 0
+
+main :: IO ()
+main = do 
+ print $ isEven 30
+  --Output = True 
+  
+A function concatStrings that takes two String values and returns their concatenation
+ 
+concatStrings :: String -> String -> String 
+concatStrings x y = x ++ y
+
+main :: IO ()
+main = do 
+ putStrLn (concatStrings "I am kaisman by name, and" " I am from the Univers." ) 
+ Output = I am kaisman by name, and I am from the Univers.
