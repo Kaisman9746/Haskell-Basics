@@ -98,8 +98,16 @@ main = do
  HC2T3 - Task 3: Immutable Variables
 Define the following immutable variables in Haskell:
 
-myAge as an Int
+--myAge as an Int
 
+age :: Int
+age = 20
+
+main :: IO ()
+main = do 
+ print $ age 20
+  --Output = 20
+  
 --piValue as a Double
 piValue :: Double 
 piValue = pi 
@@ -109,7 +117,15 @@ main = do
  print $ piValue
   --output = 3.141592653589793
   
-greeting as a String
+--greeting as a String
+
+greeting :: String
+greeting = "Happy new month"
+
+main :: IO ()
+main = do 
+ putStrLn greeting 
+  --Output = Happy new month 
 
 isHaskellFun as a Bool
 Try modifying one of the variables and observe what happens.
