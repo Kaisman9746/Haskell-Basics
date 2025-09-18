@@ -100,12 +100,12 @@ Define the following immutable variables in Haskell:
 
 --myAge as an Int
 
-age :: Int
-age = 20
+myAge :: Int
+myAge = 20
 
 main :: IO ()
 main = do 
- print $ age 20
+ print $ myAge
   --Output = 20
   
 --piValue as a Double
