@@ -128,4 +128,12 @@ main = do
   --Output = Happy new month 
 
 isHaskellFun as a Bool
-Try modifying one of the variables and observe what happens.
+
+isHaskellFun :: Bool
+isHaskellFun = True
+
+main :: IO ()
+main = do 
+ print $ isHaskellFun
+  --Outcome = True 
+
