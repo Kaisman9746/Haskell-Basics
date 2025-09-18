@@ -94,3 +94,22 @@ main :: IO ()
 main = do 
  putStrLn (concatStrings "I am kaisman by name, and" " I am from the Univers." ) 
  Output = I am kaisman by name, and I am from the Univers.
+
+ HC2T3 - Task 3: Immutable Variables
+Define the following immutable variables in Haskell:
+
+myAge as an Int
+
+--piValue as a Double
+piValue :: Double 
+piValue = pi 
+
+main :: IO ()
+main = do 
+ print $ piValue
+  --output = 3.141592653589793
+  
+greeting as a String
+
+isHaskellFun as a Bool
+Try modifying one of the variables and observe what happens.
