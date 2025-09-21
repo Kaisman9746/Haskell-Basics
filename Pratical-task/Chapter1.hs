@@ -36,7 +36,23 @@ main = do
 
  
       --Chapter1 task2
-      
+circleArea :: Floating a => a -> a
+circleArea r = pi * r ^ 2
+
+main :: IO ()
+main = do 
+ print $ circleArea 27.5
+ 
+   --AAnswer =2375.8294442772813
+
+   circleArea :: Float -> Float 
+circleArea r = pi * r * r 
+
+main :: IO ()
+main = do 
+ print $ circleArea 27.5
+  --Answer =2375.8296
+  
 circleArea :: Float -> Float 
 circleArea r = pi * r
 
