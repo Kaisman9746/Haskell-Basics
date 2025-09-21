@@ -72,7 +72,7 @@ main = do
   -- output using Int = False 
          or 
 greaterthan18 :: Int -> Bool 
-greaterthan18 x = x >= 18
+greaterthan18 x = x > 18
 
 main :: IO ()
 main = do 
