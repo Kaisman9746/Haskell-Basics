@@ -24,14 +24,15 @@ main = do
 
 doublethenincrement :: Int -> Int 
 doublethenincrement x =
-  --let double = x * 2 
-      --increment = doubled + 1 
-   --in result 
+  let double = x * 2 
+      increment = double + 1 
+  in increment 
 
 main :: IO ()
 main = do 
  print $ doublethenincrement 20
- -- answer = 41
+ 
+ --answer = 41
 
  
       --Chapter1 task2
