@@ -6,6 +6,14 @@ main = do
  print $ double 10 
  --answer = 20
 
+double :: Float-> Float
+double x = x * 2
+
+main :: IO () 
+main = do 
+ print $ double 5.5
+  --output 11.0
+
 increment :: Int -> Int 
 increment x = x + 1
 
