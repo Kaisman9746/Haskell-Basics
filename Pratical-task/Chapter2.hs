@@ -139,6 +139,9 @@ main = do
  print $ isHaskellFun
   --Outcome = True 
 
+  
+HC2T4 - Task 4: Converting Between Infix and Prefix Notations
+
   Use prefix notation for the following infix expressions:
 5 + 3, 10 * 4, True && False. 
 
