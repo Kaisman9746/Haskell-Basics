@@ -191,3 +191,31 @@ main = do
  main = do 
   print ((&&) True False) 
    --output = False 
+   
+HC2T5 - Task 5: Defining and Using Functions
+Write a function circleArea that takes a Float radius and returns the area of the circle
+
+ircleArea :: Float -> Float 
+circleArea r = pi * r ^ 2
+
+main :: IO ()
+main = do 
+ print $ circleArea 10.5
+   --output =346.3606
+ 
+circleArea :: Floating a => a -> a
+circleArea r = pi * r ^ 2
+
+main :: IO ()
+main = do 
+ print $ circleArea 25.5
+  --output =2042.820622996763
+  
+circleArea :: Int -> Float 
+circleArea r = pi * fromIntegral (r ^ 2) 
+
+main :: IO ()
+main = do 
+ print $ circleArea 20
+  --output =1256.6371
+  
