@@ -165,3 +165,29 @@ main :: IO ()
 main = do 
 print $ (True && False)
   --output = False
+
+  Use infix notation for the following prefix functions:
+(+) 7 2 , (*) 6 5 , (&&) True False
+
+
+infixExpression :: Int -> Int 
+infixExpression x = x 
+
+main :: IO ()
+main = do 
+ print $ (7 + 2)
+    --output = 9
+
+infixExpression :: Int -> Int
+infixExpression x = x 
+
+main :: IO ()
+main = do 
+ print $ (6 * 5)
+    --output = 30
+ 
+ 
+ main :: IO ()
+ main = do 
+  print ((&&) True False) 
+   --output = False 
