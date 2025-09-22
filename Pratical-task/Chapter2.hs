@@ -1,6 +1,7 @@
 --HC2T1 - Task 1: Checking Types in GHCi
 --Open GHCi and check the types of the following expressions:
 --42 , 3.14, "Haskell", 'Z', True && False
+
   --solution to all 
 
 double :: Int -> Int
@@ -18,6 +19,7 @@ main :: IO ()
 main = do 
  print $ addNumber 1.1 2.04
    Output = 3.14
+
              or 
 addNumber :: Float -> Float -> Float
 addNumber x y = x + y 
@@ -39,7 +41,7 @@ expression z = "z"
 main :: IO ()
 main = do 
  print $ expression "z"
-   --Outcome = "z"
+   --Output = "z"
           or 
 expression :: String -> String 
 expression z = "z"
@@ -47,7 +49,7 @@ expression z = "z"
 main :: IO ()
 main = do 
  print $ expression "z"
-   --outcome = "z"
+   --output = "z"
 --I want assume that both [Chat] and String posses same function in writing a code but it's just that String is a short name to [Char].
 --I stand to be corrected if this statement isn't right. 
 
