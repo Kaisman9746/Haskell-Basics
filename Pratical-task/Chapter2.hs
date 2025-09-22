@@ -138,4 +138,22 @@ main :: IO ()
 main = do 
  print $ isHaskellFun
   --Outcome = True 
+Use prefix notation for the following infix expressions:
+5 + 3, 10 * 4, True && False. 
 
+prefix :: Int -> Int 
+prefix x = x
+
+main :: IO ()
+main = do 
+ print $ (+) 5 3
+  --output = 8
+ 
+
+prefix :: Int -> Int 
+prefix x = x 
+
+main :: IO ()
+main = do 
+ print $ (*) 10  4
+ --Output = 40 
