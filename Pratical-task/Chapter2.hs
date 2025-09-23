@@ -198,7 +198,7 @@ main = do
 HC2T5 - Task 5: Defining and Using Functions
 Write a function circleArea that takes a Float radius and returns the area of the circle
 
-ircleArea :: Float -> Float 
+circleArea :: Float -> Float 
 circleArea r = pi * r ^ 2
 
 main :: IO ()
