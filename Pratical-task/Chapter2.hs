@@ -222,3 +222,29 @@ main = do
  print $ circleArea 20
   --output =1256.6371
   
+HC2T6 - Task 6: Understanding Int vs Integer
+
+smallNumber :: Int
+smallNumber = 2 ^ 62
+
+main :: IO ()
+main = do 
+ print $ smallNumber 
+  --outcome = 4611686018427387904
+  
+bigNumber :: Integer 
+bigNumber  = 2 ^ 127
+ 
+main :: IO ()
+main = do 
+ print $ bigNumber 
+  --outcome = 170141183460469231731687303715884105728
+  
+
+evaluate :: Int
+evaluate = 2 ^ 64
+
+main :: IO ()
+main = do 
+ print $ evaluate 
+  --outcome = 0
