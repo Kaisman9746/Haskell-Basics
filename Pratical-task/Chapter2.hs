@@ -251,7 +251,7 @@ smallNumber = 2 ^ 62
 main :: IO ()
 main = do 
  print $ smallNumber 
-  --outcome = 4611686018427387904
+  --output = 4611686018427387904
   
 bigNumber :: Integer 
 bigNumber  = 2 ^ 127
@@ -259,7 +259,7 @@ bigNumber  = 2 ^ 127
 main :: IO ()
 main = do 
  print $ bigNumber 
-  --outcome = 170141183460469231731687303715884105728
+  --output = 170141183460469231731687303715884105728
   
 
 evaluate :: Int
@@ -268,4 +268,46 @@ evaluate = 2 ^ 64
 main :: IO ()
 main = do 
  print $ evaluate 
-  --outcome = 0
+  --output = 0
+
+  HC2T7 - Task 7: Boolean Expressions
+Write Boolean expressions that evaluate to:
+
+--true using && 
+main :: IO ()
+main = do 
+ let expression = (6 > 4) && (5 == 5) 
+ print  expression 
+  --output = true 
+  
+main :: IO ()
+main = do 
+let expression = (4 < 8) && (10 > 6)
+ print expression 
+   --output = true 
+   
+  --Falso using || 
+main :: IO ()
+main = do 
+ let expression = (10 <= 7) || (5 == 10)
+ print expression
+  --output = false 
+  
+main :: IO ()
+main = do 
+ let expression = (1 == 2) || (5 < 1)
+ print expression
+   --output = false 
+   
+  --True using not
+
+main :: IO ()
+main = do
+    let expression = not (8 < 3)
+    print expression
+      --output = true 
+main :: IO ()
+main = do
+ let expression = not (29 == 31)
+ print expression
+   --output = true 
