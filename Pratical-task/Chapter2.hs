@@ -221,7 +221,28 @@ main :: IO ()
 main = do 
  print $ circleArea 20
   --output =1256.6371
+
+Write a function maxOfThree that takes three Int values and returns the maximum.
+Test your functions with different inputs.
+
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree x y z = max x (max y z)
+
+main :: IO ()
+main = do 
+ print $ (maxOfThree 5 3 10 ) 
+      --output = 10
+   
   
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree x y z = max x (max y x)
+
+main :: IO ()
+main = do 
+ print $ (maxOfThree 10 25 20) 
+       --output = 25
+
+       
 HC2T6 - Task 6: Understanding Int vs Integer
 
 smallNumber :: Int
