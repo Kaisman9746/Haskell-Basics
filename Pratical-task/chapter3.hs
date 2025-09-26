@@ -26,8 +26,13 @@ main = do
  putStrLn (grade 68)
  putStrLn (grade 30)
  putStrLn (grade 58) 
-
-
+    --output = A
+C
+F
+B
+D
+invalid grade
+F
 
 
 
