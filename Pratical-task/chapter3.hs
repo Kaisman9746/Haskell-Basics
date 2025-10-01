@@ -11,15 +11,26 @@ checkNumber x =
        else if x < 0 
           then "negative"
              else "zero"
-           --output negative positive zero
            
-          
 main :: IO ()
 main = do 
  putStrLn  (checkNumber (-3)) 
  putStrLn  (checkNumber 5) 
  putStrLn  (checkNumber 0) 
+    
+--output negative positive zero
+           
+HC3T2 - Task 2: Determine the grade based on a score using guards
+Define a function grade :: Int -> String.
+Use guards (|) to classify scores into grades:
+90 and above: "A"
+80 to 89: "B"
+70 to 79: "C"
+60 to 69: "D"
+Below 60: "F"
+Test your function with grade 95, grade 72, and grade 50.
 
+using if then else 
 
 grade :: Int -> String
 grade x = 
@@ -50,6 +61,8 @@ B
 D
 invalid grade
 F
+
+below is the answer writing the same code using guard 
 
 HC3T2 - Task 2: Determine the grade based on a score using guards
 Define a function grade :: Int -> String.
