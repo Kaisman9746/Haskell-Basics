@@ -1,4 +1,4 @@
-HC3T1 - Task 1: Check if a number is positive, negative, or zero
+IHC3T1 - Task 1: Check if a number is positive, negative, or zero
 Define a function checkNumber :: Int -> String.
 Use an if-then-else statement to check if the number is positive, negative, or zero.
 Return "Positive", "Negative", or "Zero" accordingly.
@@ -88,3 +88,4 @@ main = do
  putStrLn (grade 95) 
  putStrLn (grade 72) 
  putStrLn (grade 50)
+   --Output: A C F
