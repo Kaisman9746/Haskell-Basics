@@ -89,3 +89,42 @@ main = do
  putStrLn (grade 72) 
  putStrLn (grade 50)
    --Output: A C F
+   
+Define a function rgbToHex :: (Int, Int, Int) -> String.
+Use let bindings to format each color component as a two-character hex string.
+Concatenate the three hex values into a single string.
+Test your function with rgbToHex (255, 0, 127) and rgbToHex (0, 255, 64).
+
+rgbToHex :: (Int, Int, Int) -> String
+rgbToHex (r, g, b) = 
+   let hexDigits = "0123456789ABCDEF"
+      
+       toHex n =
+        let n' = max 0 (min 255 n)
+            hi = n' `div` 16
+            lo = n' `mod` 16
+         in [hexDigits !! hi, hexDigits !! lo]
+       
+       rHex = toHex r
+       gHex = toHex g
+       bHex = toHex b
+    in '#' : (rHex ++ gHex ++ bHex)
+    
+main :: IO ()
+main = do 
+ print $ rgbToHex (255, 0, 127)
+ print $ rgbToHex (0, 255, 64)
+   --output = Output: "#FF007F" "#00FF40"
+
+   writing the code another short form can be done below 
+
+   import Text.Printf (printf)
+
+rgbToHex :: (Int, Int, Int) -> String 
+rgbToHex (r, g, b) = printf "#%02X%02X%02X" r g b
+
+main :: IO ()
+main = do 
+ print $ rgbToHex (255, 0, 127)
+ print $ rgbToHex (0, 255, 64)
+    --output = Output: "#FF007F" "#00FF40"
