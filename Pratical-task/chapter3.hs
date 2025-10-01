@@ -156,3 +156,30 @@ main = do
  print (triangleArea 6 8 4)
  print (triangleArea 8 2 9)
   --output = 11.61895 7.310096
+
+  HC3T6 - Advanced Task 6: Check leap year using if-then-else
+Define isLeapYear :: Int -> Bool.
+Use if-then-else to check:
+Divisible by 400: True
+Divisible by 100 but not 400: False
+Divisible by 4: True
+Otherwise: False
+Test with isLeapYear 2000, isLeapYear 1900, and isLeapYear 2024.
+
+isLeapYear :: Int -> Bool
+isLeapYear year =
+   if year `mod` 400 == 0
+    then True
+       else if year `mod` 100 == 0
+          then False 
+              else if year `mod` 4 == 0
+                 then True
+                    else False
+                    
+main :: IO ()
+main = do 
+ print (isLeapYear 2000) 
+ print (isLeapYear 1900)
+ print (isLeapYear 2024) 
+   --Output = True False True 
+
