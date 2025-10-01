@@ -266,3 +266,45 @@ main = do
  print $ maxOfThree 5 25 10
    --output: 20 25
 
+HC3T10 - Advanced Task 10: Check if a string is a palindrome using recursion and guards
+Define isPalindrome :: String -> Bool.
+Use guards:
+If the string has 0 or 1 characters: True
+If the first and last characters match, recursively check the rest.
+Otherwise, return False.
+Test with isPalindrome "racecar", isPalindrome "haskell", and isPalindrome "madam"
+
+isPalindrome :: String -> Bool
+isPalindrome str
+ | length str <= 1 = True
+ | head str == last str = isPalindrome (init (tail str)) 
+ | otherwise = False 
+ 
+main :: IO ()
+main = do 
+ print (isPalindrome "racecar") 
+ print (isPalindrome "haskell") 
+ print (isPalindrome "racecar") 
+  --output: True False True
+  using another word to write same code
+
+  isPalindrome :: String -> Bool
+isPalindrome str
+ | length str <= 1 = True
+ | head str == last str = isPalindrome (init (tail str)) 
+ | otherwise = False 
+ 
+main :: IO ()
+main = do 
+ print (isPalindrome "bob") 
+ print (isPalindrome "data") 
+ print (isPalindrome "wow") 
+ print (isPalindrome "ada")
+   --Output: True False True True
+
+
+
+
+
+
+
