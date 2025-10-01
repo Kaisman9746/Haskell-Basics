@@ -236,7 +236,33 @@ main = do
  putStrLn (bmiCategory 70 1.75) 
  putStrLn (bmiCategory 90 1.8)
    --output: Normal Overweight
+ 
+HC3T9 - Advanced Task 9: Find the maximum of three numbers using let
+Define maxOfThree :: Int -> Int -> Int -> Int.
+Use let to store intermediate max values.
+Return the maximum of the three numbers.
+Test with maxOfThree 10 20 15 and maxOfThree 5 25 10.
 
-
-
+maxOfThree :: Int -> Int -> Int -> Int 
+maxOfThree x y z =
+  let xyMax = max x y
+   in max xyMax z
+    
+main :: IO ()
+main = do 
+ print $ maxOfThree 10 20 15
+ print $ maxOfThree 5 25 10
+   --output: 20 25 
+ 
+maxOfThree :: Int -> Int -> Int -> Int 
+maxOfThree a b c =
+ let bigger1 = max a b
+     bigger2 =max bigger1 c 
+  in bigger2
+  
+main :: IO ()
+main = do 
+ print $ maxOfThree 10 20 15
+ print $ maxOfThree 5 25 10
+   --output: 20 25
 
