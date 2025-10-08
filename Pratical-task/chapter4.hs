@@ -70,4 +70,4 @@ main = do
 --It's a bright and beautiful day!
 --A bit gloomy, but no rain yet!
 --Don't forget your umbrella!
-Weather unknown 
+--Weather unknown 
