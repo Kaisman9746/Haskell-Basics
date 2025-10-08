@@ -213,3 +213,13 @@ main = do
 --It's a weekday.
 --It's a weekday.
 --Invalid day
+
+HC4T3 - Task 3: Define a gradeComment Function
+Write a function gradeComment :: Int -> String that takes a numerical grade and returns a comment based on the grade range:
+90 - 100 → "Excellent!"
+70 - 89 → "Good job!"
+50 - 69 → "You passed."
+0 - 49 → "Better luck next time."
+Any other number → "Invalid grade".
+
+
