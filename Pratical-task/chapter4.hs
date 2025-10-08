@@ -269,3 +269,55 @@ Excellent
 Good job
 you passed
 Invalid grade
+
+HC4T4 - Task 4: Rewrite specialBirthday using Pattern Matching
+Rewrite the specialBirthday function using pattern matching instead of if-else statements.
+
+ --using pattern matching 
+specialBirthday :: Int -> String 
+specialBirthday 1  = "First birthday"
+specialBirthday 18 = "You are an adult"
+specialBirthday 60 = "Finally, I can stop caring about new lingo!"
+specialBirthday _  = "Nothing special"
+
+main :: IO ()
+main = do 
+ putStrLn (specialBirthday 1) 
+ putStrLn (specialBirthday 17) 
+ putStrLn (specialBirthday 60) 
+ putStrLn (specialBirthday 18) 
+ 
+--Output:
+
+--First birthday
+--Nothing special
+--Finally, I can stop caring about new lingo!
+--You are an adult
+
+HC4T5 - Task 5: Add a Catch-All Pattern with a Custom Message
+Modify specialBirthday to include the age in the return message when it doesn’t match predefined cases.
+
+
+--using pattern matching
+
+specialBirthday :: Int -> String 
+specialBirthday 1   = "First birthday"
+specialBirthday 18  = "You are an adult"
+specialBirthday 60  = "Finally, I can stop caring about new lingo!"
+specialBirthday age = "Age " ++ show age ++ " Nothing a special birthday" 
+specialBirthday _  = "Nothing special"
+
+
+
+main :: IO ()
+main = do 
+ putStrLn (specialBirthday 1) 
+ putStrLn (specialBirthday 35) 
+ putStrLn (specialBirthday 60) 
+ putStrLn (specialBirthday 18)
+
+   --output
+--First birthday
+--Age 35 Nothing a special birthday
+--Finally, I can stop caring about new lingo!
+--You are an adult
