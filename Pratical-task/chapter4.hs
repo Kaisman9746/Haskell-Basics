@@ -222,4 +222,50 @@ Write a function gradeComment :: Int -> String that takes a numerical grade and 
 0 - 49 → "Better luck next time."
 Any other number → "Invalid grade".
 
+   --using guard
 
+gradeComment :: Int -> String 
+gradeComment n
+  | n `elem` [90..100] = "Excellent"
+  | n `elem` [70..89]  = "Good job!"
+  | n `elem` [50..60]  = "You passed."
+  | n `elem` [0..49]   = "Better luck next time."
+  | otherwise          = "Invalid grade"
+
+main :: IO ()
+main = do 
+ putStrLn (gradeComment 95) 
+ putStrLn (gradeComment 75)
+ putStrLn
+ (gradeComment 56)
+ putStrLn (gradeComment -1grade
+
+--Output
+--Excellent
+--Good job!
+--You passed.
+--Invalid grade
+
+ --using if then else 
+gradeComment :: Int -> String 
+gradeComment n =
+ if n >= 90 &&  n <= 100 then "Excellent"
+  else if n >= 70 &&  n <= 89 then "Good job"
+        else if n >= 50 &&  n <= 60 then "you passed"
+              else if n >= 0 &&  n <= 49 then "Better luck next time."
+                    else                 "Invalid grade"
+
+main :: IO ()
+main = do 
+ putStrLn (gradeComment 95) 
+ putStrLn (gradeComment 71)
+ putStrLn (gradeComment 59)
+ putStrLn (gradeComment (-15))
+
+
+Output:
+
+Excellent
+Good job
+you passed
+Invalid grade
