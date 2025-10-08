@@ -20,6 +20,6 @@ main = do
  putStrLn (weatherReport "cloudy")
 
  --output
-It's a bright and beautiful day!
-Don't forget your umbrella!
-A bit gloomy, but no rain yet!
+--It's a bright and beautiful day!
+--Don't forget your umbrella!
+--A bit gloomy, but no rain yet!
