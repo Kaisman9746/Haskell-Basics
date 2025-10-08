@@ -71,3 +71,73 @@ main = do
 --A bit gloomy, but no rain yet!
 --Don't forget your umbrella!
 --Weather unknown 
+
+HC4T2 - Task 2: Define a dayType Function
+Create a function dayType :: String -> String that determines if a given day of the week is a weekday or weekend.
+"Saturday" and "Sunday" → "It's a weekend!"
+Any other day of the week → "It's a weekday."
+If an invalid day is provided, return "Invalid day".
+
+--solution using pattern matching 
+
+dayType :: String -> String 
+dayType "Saturday" = "It's a weekend!"
+dayType "Sunday"   = "It's a weekend!"
+dayType "Monday"   = "It's a weekday."
+dayType "Tuesday"  = "It's a weekday."
+dayType "Wednesday" = "It's a weekday."
+dayType "Thurday"  = "It's a weekday."
+dayType "Friday"   = "It's a weekday."
+dayType _           =  "Invalid day"
+
+main :: IO ()
+main = do 
+ putStrLn (dayType "Saturday") 
+ putStrLn (dayType "Sunday")
+ putStrLn (dayType "Monday")
+ putStrLn (dayType "Tuesday")
+ putStrLn (dayType "Wednesday")
+ putStrLn (dayType "Thursday")
+ putStrLn (dayType "Friday")
+
+--Output
+It's a weekend!
+It's a weekend!
+It's a weekday.
+It's a weekday.
+It's a weekday.
+Invalid day
+It's a weekday.
+
+ --same code using guards
+
+dayType :: String -> String 
+dayType d =
+ | d == "Saturday"  = "It's a weekend!"
+ | d == "Sunday"    = "It's a weekend!"
+ | d == "Monday"    = "It's a weekday."
+ | d == "Tuesday"   = "It's a weekday."
+ | d == "Wednesday" = "It's a weekday."
+ | d == "Thursday"  = "It's a weekday."
+ | d == "Friday"    = "It's a weekday."
+ | otherwise  =  "Invalid day"
+
+main :: IO ()
+main = do 
+ putStrLn (dayType "Saturday") 
+ putStrLn (dayType "Sunday")
+ putStrLn (dayType "Monday")
+ putStrLn (dayType "Tuesday")
+ putStrLn (dayType "Wednesday")
+ putStrLn (dayType "Thursday")
+ putStrLn (dayType "Friday")
+
+--Output
+--It's a weekend!
+--It's a weekend!
+--It's a weekday.
+--It's a weekday.
+--It's a weekday.
+--Invalid day
+--It's a weekday.
+
