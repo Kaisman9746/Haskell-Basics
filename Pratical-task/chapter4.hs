@@ -321,3 +321,81 @@ main = do
 --Age 35 Nothing a special birthday
 --Finally, I can stop caring about new lingo!
 --You are an adult
+
+HC4T6 - Task 6: Identify List Contents Using Pattern Matching
+Create a function whatsInsideThisList that returns a string based on the number of elements in a list.
+
+ --using pattern matching
+
+whatsInsideThisList :: [Int] -> String 
+whatsInsideThisList [] = "this is empty list"
+whatsInsideThisList [x] = "this list has only one item:" ++ show x
+whatsInsideThisList [x, y] = "the list has two items:" ++ show x ++ "and" ++ show y
+whatsInsideThisList (x:xs) = "this list has first item and many other items:" ++ show x ++ " and others items" ++ show xs
+
+main :: IO ()
+main = do 
+ putStrLn (whatsInsideThisList []) 
+ putStrLn (whatsInsideThisList [1]) 
+ putStrLn (whatsInsideThisList [1,2]) 
+ putStrLn (whatsInsideThisList [1..100]) 
+
+
+--Output:
+
+--this is empty list
+--this list has only one item:1
+--the list has two items:1and2
+--this list has first item and many other --items:1 and others --items[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100]
+
+   --using if then else
+whatsInsideThisList :: [Int] -> String
+whatsInsideThisList lst =
+  if null lst then
+    "This is an empty list"
+  else if length lst == 1 then
+    "The list has only one item: " ++ show (head lst)
+  else if length lst == 2 then
+    "The list has two items: " ++ show (head lst) ++ " and " ++ show (last lst)
+  else
+    "The list has a first item and many others: " ++ show (head lst) ++ " and others " ++ show (tail lst)
+
+main :: IO ()
+main = do
+  putStrLn (whatsInsideThisList [])
+  putStrLn (whatsInsideThisList [1])
+  putStrLn (whatsInsideThisList [1, 2])
+  putStrLn (whatsInsideThisList [1..10])
+
+
+ --Output:
+
+--This is an empty list
+--The list has only one item: 1
+--The list has two items: 1 and 2
+--The list has a first item and many others: 1 and others [2,3,4,5,6,7,8,9,10]
+
+  --using guard 
+
+whatsInsideThisList :: [Int] -> String
+whatsInsideThisList lst
+  | null lst = "This is an empty list"
+  | length lst == 1 = "The list has only one item: " ++ show (head lst)
+  | length lst == 2 = "The list has two items: " ++ show (head lst) ++ " and " ++ show (last lst)
+  | otherwise = "The list has a first item and many others: " ++ show (head lst) ++ " and others " ++ show (tail lst)
+
+main :: IO ()
+main = do
+  putStrLn (whatsInsideThisList [])
+  putStrLn (whatsInsideThisList [1])
+  putStrLn (whatsInsideThisList [1, 2])
+  putStrLn (whatsInsideThisList [1..10])
+
+
+
+--Output:
+
+--This is an empty list
+--The list has only one item: 1
+--The list has two items: 1 and 2
+--The list has a first item and many others: 1 and others [2,3,4,5,6,7,8,9,10]
