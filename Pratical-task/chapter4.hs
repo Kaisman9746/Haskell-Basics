@@ -399,3 +399,56 @@ main = do
 --The list has only one item: 1
 --The list has two items: 1 and 2
 --The list has a first item and many others: 1 and others [2,3,4,5,6,7,8,9,10]
+
+HC4T7 - Task 7: Ignore Elements in a List
+Modify firstAndThird to return only the first and third elements of a list, ignoring others.
+
+   --using pattern matching
+
+firstAndThird :: [Int] -> String 
+firstAndThird (x:_:y:_) =
+ "The first number is " ++ show x ++ " and " ++ "The third number is " ++ show y
+firstAndThird _         =  "too short numbers to indentify first and third numbers"
+
+main :: IO ()
+main = do 
+ putStrLn (firstAndThird [9,6,4]) 
+ putStrLn (firstAndThird [1,2,3,4,5,6,7,8,9,10]) 
+ putStrLn (firstAndThird []) 
+ putStrLn (firstAndThird [20,30,40,50,60, 70,80,90,100]) 
+ putStrLn (firstAndThird [1,2,-3,4])
+
+--Output:
+
+--The first number is 9 and The third number is 4
+--The first number is 1 and The third number is 3
+--too short numbers to indentify first and third numbers
+--The first number is 20 and The third number is 40
+--The first number is 1 and The third number is -3
+
+HC4T8 - Task 8: Extract Values from Tuples
+Create a function describeTuple that extracts values from a tuple and returns a string.
+
+  --using pattern matching
+
+describeTuple :: (Int, Int,String) -> String 
+describeTuple  (a,b, c) =
+ "the first number is " ++ show a ++
+ " and the second number is " ++ show b ++ 
+ " while the third word is " ++ c 
+describeTuple _  = 
+ "anything else is not worth to be our numbers and words. "
+
+main :: IO ()
+main = do 
+ putStrLn (describeTuple (5, 10, "apple")) 
+ putStrLn (describeTuple (1, 6, "orange")) 
+ putStrLn (describeTuple (-2,-6,"mango"))
+ 
+
+
+Output:
+
+the first number is 5 and the second number is 10 while the third word isapple
+the first number is 1 and the second number is 6 while the third word isorange
+the first number is -2 and the second number is -6 while the third word ismango
