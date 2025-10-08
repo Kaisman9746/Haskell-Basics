@@ -179,5 +179,37 @@ main = do
 --It's a weekday.
 --It's a weekday.
 --It's a weekday.
---It's a weekday
+--It's a weekday. 
 
+
+dayType :: String -> String 
+dayType d = 
+ if d == "Saturday" then "It's a weekend!"
+  else if d == "Sunday" then "It's a weekend!"
+        else if d == "Monday" then "It's a weekday."
+              else if d == "Tuesday" then "It's a weekday."
+                    else if d == "Wednesday" then "It's a weekday."
+                          else if d == "Thursday" then "It's a weekday."
+                                else if d == "Friday" then "It's a weekday."
+                                      else "Invalid day"
+                                      
+main :: IO () 
+main = do 
+ putStrLn (dayType "Saturday") 
+ putStrLn (dayType "Sunday")
+ putStrLn (dayType "Monday")
+ putStrLn (dayType "Tuesday")
+ putStrLn (dayType "Wednesday")
+ putStrLn (dayType "Thursday")
+ putStrLn (dayType "Friday")
+ putStrLn (dayType "Christmas") 
+
+  
+--It's a weekend!
+--It's a weekend!
+--It's a weekday.
+--It's a weekday.
+--It's a weekday.
+--It's a weekday.
+--It's a weekday.
+--Invalid day
