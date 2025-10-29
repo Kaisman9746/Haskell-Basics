@@ -1,4 +1,4 @@
---HC5T1: Using applyTwice
+Combine filter, map, and any to create a function that checks if any squared value in a list is greater than 50.--HC5T1: Using applyTwice
 --Define a function that takes a function and --an integer, then applies the function three --times to the integer.
 
 
@@ -266,6 +266,6 @@ main :: IO ()
 main = do 
  print (transformList (*2) [2, 4,5]) 
 
-Output:
+--Output:
 
-[8,16,20]
+--[8,16,20]
