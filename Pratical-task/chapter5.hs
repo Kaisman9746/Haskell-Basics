@@ -176,4 +176,35 @@ False
 False
 
 
+Create a function multiplyByFive that uses partial application to multiply any number by 5.
+
+
+multiplyByFive :: Int -> Int 
+multiplyByFive = (5*)
+
+main :: IO ()
+main = do 
+ print (multiplyByFive 10) 
+ print (multiplyByFive 2)
+ print (multiplyByFive 3)
+ print (multiplyByFive 7)
+
+--Output:
+
+50
+10
+15
+35
+
+
+multiplyByFive :: Int -> Int
+multiplyByFive x = x * 5
+
+main :: IO ()
+main = do 
+ print (multiplyByFive 2)
+
+--output 
+  10
+
 
