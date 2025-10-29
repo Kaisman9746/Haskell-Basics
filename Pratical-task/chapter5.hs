@@ -208,3 +208,31 @@ main = do
   10
 
 
+Use function composition (.) to create a function that takes a list of numbers and returns their squares filtered to only keep the even ones.
+
+
+squareEven :: [Int] -> [Int]
+squareEven = filter even . map (^2)
+
+main :: IO ()
+main = do 
+ print (squareEven [1,2,3,4,5,6,7,8,9,10]) 
+
+Output:
+
+[4,16,36,64,100]
+
+
+--trying it with odd
+
+squareEven :: [Int] -> [Int]
+squareEven = filter odd . map (^2)
+
+main :: IO ()
+main = do 
+ print (squareEven [1,2,3,4,5,6,7,8,9,10]) 
+
+
+Output:
+
+[1,9,25,49,81]
