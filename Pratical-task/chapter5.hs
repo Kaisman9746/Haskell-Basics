@@ -269,3 +269,39 @@ main = do
 --Output:
 
 --[8,16,20]
+
+
+Combine filter, map, and any to create a function that checks if any squared value in a list is greater than 50.
+
+checkSquare :: Int -> Bool 
+checkSquare x = x ^ 2 > 50 
+
+filterAny :: [Int] -> Bool
+filterAny xs = any checkSquare xs
+
+main :: IO ()
+main = do 
+ print $ (filterAny [2, 4,10,15, 25])
+ print $ (filterAny [1, 2,4,5,6])
+
+--True 
+--False
+
+checkSquare :: Int -> Bool
+checkSquare x = x ^ 2 > 50
+
+filterAny :: [Int] -> Bool
+filterAny xs = any checkSquare xs
+
+main :: IO ()
+main = do 
+ print $ (filterAny [ 2, 4, 10, 15, 25])
+ print $ (filterAny [ 0, 5, 3, 6, (-5)])
+ print $ (filterAny [ 1, 2, 4, 5, 6])
+ 
+
+--Output:
+
+--True
+--False
+--False
