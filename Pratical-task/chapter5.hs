@@ -68,3 +68,83 @@ main = do
 --[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29]
 --[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]
 
+Write a function using any that checks if a list of words contains any word that starts with an uppercase letter.
+
+import Data.Char (isUpper) 
+
+startWithUpper :: String -> Bool
+startWithUpper word = not (null word) && isUpper (head word)
+
+findAnyUpperCaseWord :: [String] -> Bool 
+findAnyUpperCaseWord = any startWithUpper
+
+main :: IO ()
+main = do 
+ print (findAnyUpperCaseWord ["Taiwo", "Orangee"])
+ print (findAnyUpperCaseWord ["baby Zillion", "baba Zillion"])
+ print (findAnyUpperCaseWord ["Head boy", "head Girl"])
+ print (findAnyUpperCaseWord ["vanity upon vanity","such is Life"])
+
+--Output:
+
+--True
+--False
+--True
+--False
+
+import Data.Char (isUpper)
+startsWithUpper :: String -> Bool
+startsWithUpper word = not (null word) && isUpper (head word)
+
+findAnyUpper :: [String] -> Bool
+findAnyUpper = any startsWithUpper
+
+main :: IO ()
+main = do 
+ print (findAnyUpper ["Apple", "Rice", "Teslim"])
+
+--Output 
+--True
+
+import Data.Char (isUpper)
+startsWithUpper :: String -> Bool
+startsWithUpper word = not (null word) && isUpper (head word)
+
+findAnyUpper :: [String] -> Bool
+findAnyUpper = any startsWithUpper
+
+main :: IO ()
+main = do 
+ print (findAnyUpper ["blessing", "school", " air Force"])
+
+--Output 
+Force
+
+--using lambda format
+
+import Data.Char (isUpper)
+
+findAnyUpper :: [String] -> Bool
+findAnyUpper = any (\w -> not (null w) && isUpper (head w)) 
+
+main :: IO ()
+main = do 
+ print (findAnyUpper ["Apple", "Orange", "Blue", "Car"])
+
+--Output 
+True
+
+import Data.Char (isUpper)
+
+findAnyUpper :: [String] -> Bool
+findAnyUpper = any (\w -> not (null w) && isUpper (head w)) 
+
+main :: IO ()
+main = do 
+ print (findAnyUpper ["apple", "orange", "blue", "car Charger "])
+ 
+ --Output 
+  False
+
+
+
