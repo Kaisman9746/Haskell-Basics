@@ -254,3 +254,18 @@ main = do
 
 --The result is
 --98
+
+
+Write a higher-order function transformList that applies a given function twice to every element of a list.
+
+
+transformList :: (a -> a) -> [a] -> [a]
+transformList f xs = map (f.f) xs
+
+main :: IO ()
+main = do 
+ print (transformList (*2) [2, 4,5]) 
+
+Output:
+
+[8,16,20]
