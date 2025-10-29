@@ -146,5 +146,34 @@ main = do
  --Output 
   False
 
+Rewrite the following function using a lambda function:
+biggerThan10 x = x > 10
+
+biggerThan10 :: Int -> Bool
+biggerThan10 x = x > 10
+
+main :: IO ()
+main = do 
+ print (biggerThan10 15True
+
+--Output
+  True
+--using lambda format 
+
+biggerThan10 :: Int -> Bool
+biggerThan10 = \x -> x > 10
+
+main :: IO ()
+main = do 
+ print (biggerThan10 15) 
+ print (biggerThan10 9)
+ print (biggerThan10 10)
+
+Output 
+
+True 
+False 
+False
+
 
 
