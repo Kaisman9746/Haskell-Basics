@@ -18,3 +18,19 @@ main = do
 24
 28
 5000
+
+--using division sigh 
+applyThrice :: (Float -> Float) -> Float -> Float 
+applyThrice f x = f (f (f x))
+ 
+main :: IO ()
+main = do 
+ print (applyThrice (/5) 50)
+ print (applyThrice (/2) 30)
+ print (applyThrice (/2) 8)
+
+--Output
+
+0.4
+3.75
+1.0
