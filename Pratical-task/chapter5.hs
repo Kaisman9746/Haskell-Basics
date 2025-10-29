@@ -236,3 +236,21 @@ main = do
 Output:
 
 [1,9,25,49,81]
+
+
+Rewrite the following function using the $ operator:
+result = sum (map (*2) (filter (>3) [1..10]))
+
+result :: Int 
+result = sum $ map (*2) $ filter (>3) [1..10]
+
+main :: IO ()
+main = do 
+ putStrLn "The result is"
+ print result 
+
+
+--Output:
+
+--The result is
+--98
