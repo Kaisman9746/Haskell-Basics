@@ -118,7 +118,17 @@ main :: IO ()
 main = do 
  print $ piValue
   --output = 3.141592653589793
-  
+
+
+  piValue :: Float -> Float 
+piValue x = 3.14 * x * x
+
+main :: IO ()
+main = do 
+ print $ piValue 20
+
+   --Output 1256.0
+
 --greeting as a String
 
 greeting :: String
