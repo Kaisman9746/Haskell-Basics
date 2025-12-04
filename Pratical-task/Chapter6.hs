@@ -82,3 +82,15 @@ main = do
     print (elementExists 3 [1,2,3,4,5])  -- True
     print (elementExists 6 [1,2,3,4,5])  -- False
      --Output True False
+     
+--HC6T7: List Length
+--Implement a function that takes a list and returns the length of the list.
+
+myLength :: [a] -> Int
+myLength [] = 0
+myLength (_:xs) = 1 + myLength xs
+
+main :: IO ()
+main = do
+    print (myLength [10,20,30,40])  
+     --Output = 4
