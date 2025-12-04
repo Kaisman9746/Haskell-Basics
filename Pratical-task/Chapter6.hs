@@ -81,4 +81,4 @@ main :: IO ()
 main = do
     print (elementExists 3 [1,2,3,4,5])  -- True
     print (elementExists 6 [1,2,3,4,5])  -- False
-     --Output TrueFalse
+     --Output True False
