@@ -94,3 +94,17 @@ main :: IO ()
 main = do
     print (myLength [10,20,30,40])  
      --Output = 4
+--HC6T8: Filter Even Numbers
+--Implement a function that filters all even numbers from a list.
+
+
+     filterEven :: [Int] -> [Int]
+filterEven [] = []
+filterEven (x:xs)
+    | even x    = x : filterEven xs
+    | otherwise = filterEven xs
+
+main :: IO ()
+main = do
+    print (filterEven [1,2,3,4,5,6]) 
+    -- Output = [2,4,6]
