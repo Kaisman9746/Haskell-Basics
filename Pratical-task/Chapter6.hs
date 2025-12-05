@@ -108,3 +108,15 @@ main :: IO ()
 main = do
     print (filterEven [1,2,3,4,5,6]) 
     -- Output = [2,4,6]
+--HC6T9: Map Implementation
+--Implement a function that applies a given function to each element of a list (map implementation).
+
+   -- Way 1 — recursion
+myMap :: (a -> b) -> [a] -> [b]
+myMap _ [] = []
+myMap f (x:xs) = f x : myMap f xs
+
+main :: IO ()
+main = do
+    print (myMap (*2) [1,2,3,4]) 
+       -- Output: [2,4,6,8]
