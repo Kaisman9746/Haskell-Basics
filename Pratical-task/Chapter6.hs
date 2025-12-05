@@ -120,3 +120,15 @@ main :: IO ()
 main = do
     print (myMap (*2) [1,2,3,4]) 
        -- Output: [2,4,6,8]
+--HC6T10: Digits of a Number (Recursive)
+--Implement a recursive function that takes a number and returns a list of its digits.
+
+digits :: Int -> [Int]
+digits n
+    | n < 10    = [n]
+    | otherwise = digits (n `div` 10) ++ [n `mod` 10]
+
+main :: IO ()
+main = do
+    print (digits 5234) 
+      -- Output: [5,2,3,4]
