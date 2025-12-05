@@ -85,3 +85,16 @@ main = do
      --Rectangle 3.0 4.0
      --Circle 7.0
      --Rectangle 2.0 8.0
+  
+  --HC7T5: Function with Num Constraint
+--Write a function squareArea that calculates the area of a square given its side length.
+--Ensure that the function works with any numeric type.
+
+-- Function to calculate square area
+squareArea :: Num a => a -> a
+squareArea side = side * side
+
+main :: IO ()
+main = do
+    print (squareArea 5)     -- 25
+    print (squareArea 3.5)   -- 12.25
