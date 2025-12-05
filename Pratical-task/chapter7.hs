@@ -98,3 +98,59 @@ main :: IO ()
 main = do
     print (squareArea 5)     -- 25
     print (squareArea 3.5)   -- 12.25
+
+--HC7T6: Using Integral and Floating Type Classes
+
+-- Function to calculate circumference of a circle
+
+circleCircumference :: Double -> Double
+circleCircumference r = 2 * pi * r
+
+main :: IO ()
+main = do
+    print (circleCircumference 5)      
+    print (circleCircumference 3.5)    
+
+    Output:
+--31.41592653589793
+--21.991148575128552
+HC7T7: Bounded and Enum
+
+data Color = Red | Green | Blue
+    deriving (Show, Eq)
+
+nextColor :: Color -> Color
+nextColor Red   = Green
+nextColor Green = Blue
+nextColor Blue  = Red
+
+main :: IO ()
+main = do
+    print (nextColor Red)   
+    print (nextColor Green)  
+    print (nextColor Blue)  
+     --Output: Green Blue Red
+
+  --HC7T8: Parse a Value from a String Using Read
+  data Shape = Circle Double
+           | Rectangle Double Double
+           deriving (Show, Read)
+
+parseShape :: String -> Maybe Shape
+parseShape str =
+    case reads str of
+        [(shape, "")] -> Just shape
+        _             -> Nothing
+
+main :: IO ()
+main = do
+    print (parseShape "Circle 5")         -- Just (Circle 5.0)
+    print (parseShape "Rectangle 3 4")    -- Just (Rectangle 3.0 4.0)
+    print (parseShape "Square 5")         -- Nothing (invalid input)
+    print (parseShape "Circle")           -- Nothing (missing radius)
+
+    --Output:
+       --Just (Circle 5.0)
+      --Just (Rectangle 3.0 4.0)
+       --Nothing
+       --Nothing
