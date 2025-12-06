@@ -1,1 +1,18 @@
+-- Create type synonyms
+type Address = String
+type Value   = Int
 
+-- Define the generateTx function
+generateTx :: Address -> Address -> Value -> String
+generateTx fromAddr toAddr amount =
+    "From: " ++ fromAddr
+    ++ ", To: " ++ toAddr
+    ++ ", Amount: " ++ show amount
+
+-- Main function to test it
+main :: IO ()
+main = do
+    putStrLn (generateTx "Alice" "Bob" 50)
+
+Output:
+From: Alice, To: Bob, Amount: 50
