@@ -154,3 +154,73 @@ main = do
       --Just (Rectangle 3.0 4.0)
        --Nothing
        --Nothing
+HC7T9: Type Class with Multiple Instances
+data Shape = Circle Double
+           | Rectangle Double Double
+           deriving (Show)
+
+class Describable a where
+    describe :: a -> String
+
+instance Describable Bool where
+    describe True  = "This is True."
+    describe False = "This is False."
+
+instance Describable Shape where
+    describe (Circle r) =
+        "A circle with radius " ++ show r
+
+    describe (Rectangle w h) =
+        "A rectangle with width " ++ show w ++
+        " and height " ++ show h
+
+main :: IO ()
+main = do
+    print (describe True)
+    print (describe False)
+    print (describe (Circle 5))
+    print (describe (Rectangle 3 4)) 
+    
+    --Output:
+    --"This is True."
+    --"This is False."
+    --"A circle with radius 5.0"
+    --"A rectangle with width 3.0 and height 4.0"
+
+ --HC7T10: Function with Multiple Type Class Constraints
+
+ 
+class Describable a where
+    describe :: a -> String
+
+data Shape = Circle Double
+           | Rectangle Double Double
+           deriving (Show, Ord, Eq)
+
+instance Describable Bool where
+    describe True  = "This is True."
+    describe False = "This is False."
+
+instance Describable Shape where
+    describe (Circle r) =
+        "A circle with radius " ++ show r
+    describe (Rectangle w h) =
+        "A rectangle with width " ++ show w ++
+        " and height " ++ show h
+
+describeAndCompare :: (Describable a, Ord a) => a -> a -> String
+describeAndCompare x y =
+    if x > y
+        then describe x
+        else describe y
+
+main :: IO ()
+main = do
+    print (describeAndCompare True False)
+    print (describeAndCompare (Circle 4) (Rectangle 2 3))
+
+    Output:
+
+"This is True."
+"A rectangle with width 2.0 and height 3.0"
+       
