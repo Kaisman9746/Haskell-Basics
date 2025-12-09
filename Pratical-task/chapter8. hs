@@ -44,3 +44,9 @@ main = do
     putStrLn ("Name: " ++ name bob)
     putStrLn ("Address: " ++ fst (address bob) ++ ", House No: " ++ show (snd (address bob)))
     putStrLn ("Payment Method: " ++ show (paymentMethod bob))
+
+Output:
+
+Name: Bob
+Address: Main Street, House No: 12
+Payment Method: Cash
