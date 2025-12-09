@@ -16,3 +16,31 @@ main = do
 
 Output:
 From: Alice, To: Bob, Amount: 50
+
+
+-- Step 1: Define the PaymentMethod type
+data PaymentMethod = Cash | Card | Cryptocurrency
+    deriving Show   -- This allows us to print the payment method easily
+
+-- Step 2: Define the Person type
+-- A Person has a name (String), an address (tuple of String and Int), and a payment method
+data Person = Person
+    { name          :: String
+    , address       :: (String, Int)
+    , paymentMethod :: PaymentMethod
+    }
+
+-- Step 3: Create a person named Bob who pays with Cash
+bob :: Person
+bob = Person
+    { name = "Bob"
+    , address = ("Main Street", 12)
+    , paymentMethod = Cash
+    }
+
+-- Step 4: Main function to print Bob's details
+main :: IO ()
+main = do
+    putStrLn ("Name: " ++ name bob)
+    putStrLn ("Address: " ++ fst (address bob) ++ ", House No: " ++ show (snd (address bob)))
+    putStrLn ("Payment Method: " ++ show (paymentMethod bob))
