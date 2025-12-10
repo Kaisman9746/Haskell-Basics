@@ -75,3 +75,27 @@ main = do
 Output:
 Area of Circle with radius 5: 78.5
 Area of Rectangle 10 x 5: 50.0
+
+-- Step 1: Define the Employee type using record syntax
+data Employee = Employee
+    { name :: String
+    , experienceInYears :: Float
+    } deriving Show   -- allows printing Employee easily
+
+-- Step 2: Create an employee named Richard
+richard :: Employee
+richard = Employee
+    { name = "Richard"
+    , experienceInYears = 7.5
+    }
+
+-- Step 3: Main function to print Richard's details
+main :: IO ()
+main = do
+    putStrLn ("Employee Name: " ++ name richard)
+    putStrLn ("Experience (years): " ++ show (experienceInYears richard))
+
+Output:
+
+Employee Name: Richard
+Experience (years): 7.5
