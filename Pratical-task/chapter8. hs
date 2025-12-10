@@ -99,3 +99,43 @@ Output:
 
 Employee Name: Richard
 Experience (years): 7.5
+
+
+
+data Person = Person
+    { name       :: String
+    , age        :: Int
+    , isEmployed :: Bool
+    } deriving Show
+
+person1 :: Person
+person1 = Person
+    { name = "John"
+    , age = 28
+    , isEmployed = True
+    }
+
+person2 :: Person
+person2 = Person
+    { name = "Mary"
+    , age = 25
+    , isEmployed = False
+    }
+
+main :: IO ()
+main = do
+    putStrLn ("Person1 Name: " ++ name person1)
+    putStrLn ("Person1 Age: " ++ show (age person1))
+    putStrLn ("Person1 Employed: " ++ show (isEmployed person1))
+    
+    putStrLn ("Person2 Name: " ++ name person2)
+    putStrLn ("Person2 Age: " ++ show (age person2))
+    putStrLn ("Person2 Employed: " ++ show (isEmployed person2))
+
+Output:
+Person1 Name: John
+Person1 Age: 28
+Person1 Employed: True
+Person2 Name: Mary
+Person2 Age: 25
+Person2 Employed: False
