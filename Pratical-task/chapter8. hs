@@ -72,4 +72,6 @@ main = do
     putStrLn ("Area of Circle with radius 5: " ++ show (area myCircle))
     putStrLn ("Area of Rectangle 10 x 5: " ++ show (area myRectangle))
 
-
+Output:
+Area of Circle with radius 5: 78.5
+Area of Rectangle 10 x 5: 50.0
