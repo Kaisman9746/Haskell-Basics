@@ -50,3 +50,26 @@ Output:
 Name: Bob
 Address: Main Street, House No: 12
 Payment Method: Cash
+
+
+-- Step 1: Define the Shape type
+data Shape = Circle Float | Rectangle Float Float
+    deriving Show  -- allows us to print shapes if needed
+
+-- Step 2: Define the area function
+area :: Shape -> Float
+area shape =
+    case shape of
+        Circle r      -> 3.14 * r * r       -- area of a circle = π * r^2
+        Rectangle w h -> w * h              -- area of a rectangle = width * height
+
+-- Step 3: Main function to calculate and print areas
+main :: IO ()
+main = do
+    let myCircle = Circle 5            -- circle with radius 5
+    let myRectangle = Rectangle 10 5  -- rectangle with width 10 and height 5
+
+    putStrLn ("Area of Circle with radius 5: " ++ show (area myCircle))
+    putStrLn ("Area of Rectangle 10 x 5: " ++ show (area myRectangle))
+
+
