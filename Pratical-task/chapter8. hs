@@ -139,3 +139,22 @@ Person1 Employed: True
 Person2 Name: Mary
 Person2 Age: 25
 Person2 Employed: False
+
+data Shape
+    = Circle  { center :: (Float, Float), radius :: Float, color :: String }
+    | Rectangle { width :: Float, height :: Float, color :: String }
+    deriving Show
+
+myCircle :: Shape
+myCircle = Circle { center = (0,0), radius = 5, color = "Red" }
+
+myRectangle :: Shape
+myRectangle = Rectangle { width = 10, height = 5, color = "Blue" }
+
+main :: IO ()
+main = do
+    print myCircle
+    print myRectangle
+output 
+Circle {center = (0.0,0.0), radius = 5.0, color = "Red"}
+Rectangle {width = 10.0, height = 5.0, color = "Blue"}
