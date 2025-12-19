@@ -205,4 +205,23 @@ main = do
 output 
 Transaction ID: TXN001
 
+-- Define the Book type with three fields
+data Book = Book
+  { title  :: String
+  , author :: String
+  , year   :: Int
+  } deriving Show
+
+-- Main function to create and print a Book
+main :: IO ()
+main = do
+  let myBook = Book "Learn Haskell" "Kehinde" 2025
+  print myBook
+
+Output:
+
+Book {title = "Learn Haskell", author = "Kehinde", year = 2025}
+
+
+
 
