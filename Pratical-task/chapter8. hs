@@ -175,4 +175,34 @@ main = do
     putStrLn (greet "Bob" 25)
 output 
 Hello, Alice! You are 30 years old.
-ello, Alice! You are 30 years old
+ello, Alice! You are 30 years oldold
+
+type Address = String
+type Value = Int
+
+data Transaction = Transaction
+    { from          :: Address
+    , to            :: Address
+    , amount        :: Value
+    , transactionId :: String
+    } deriving Show
+
+createTransaction :: Address -> Address -> Value -> String
+createTransaction sender receiver value =
+    let txn = Transaction
+                { from = sender
+                , to = receiver
+                , amount = value
+                , transactionId = "TXN001"
+                }
+    in transactionId txn
+
+main :: IO ()
+main = do
+    let txnId = createTransaction "Alice123" "Bob456" 100
+    putStrLn ("Transaction ID: " ++ txnId)
+
+output 
+Transaction ID: TXN001
+
+
