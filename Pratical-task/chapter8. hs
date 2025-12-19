@@ -162,3 +162,17 @@ Rectangle {width = 10.0, height = 5.0, color = "Blue"}
 output 
 This is a dog named Buddy
 This is a cat named Whiskers
+
+type Name = String
+type Age = Int
+
+greet :: Name -> Age -> String
+greet name age = "Hello, " ++ name ++ "! You are " ++ show age ++ " years old."
+
+main :: IO ()
+main = do
+    putStrLn (greet "Alice" 30)
+    putStrLn (greet "Bob" 25)
+output 
+Hello, Alice! You are 30 years old.
+ello, Alice! You are 30 years old
